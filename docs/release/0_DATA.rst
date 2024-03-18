@@ -85,7 +85,7 @@ This integer type variable can be used to find the event light-curve and it is s
     +-------------------------------+------------------------------------------------------+
     | ``HOSTGAL_MAG_[band]``        | host mags for band=u,g,r,i,z,Y                       |
     +-------------------------------+------------------------------------------------------+
-    | ``HOSTGAL_MAGERR_[band]``     | uncertainty on host magnitude. Each hostgal_xxx has  |
+    | ``HOSTGAL_MAGERR_[band]``     | Host magnitude error. Each hostgal_xxx has           |
     |                               | hostgal2_xxx for 2nd host-match;                     |
     |                               | -999 indicates no 2nd host; else values are filled.  |
     |                               | First listed host has smallest DDLR and may not be   |
@@ -100,7 +100,8 @@ This integer type variable can be used to find the event light-curve and it is s
 
 
 ``PHOT`` file
-=============
+-------------
+
 The ``PHOT`` file contains the light curve measurements, with all written sequentially to the ``PHOT``-tables, and pointers in the ``HEAD`` file (see ``PTROBS_MIN`` and ``PTROBS_MAX``) are used to select the appropriate rows from the PHOT table. To help catch pointer mistakes, ``MJD = -777`` is written after each light curve to clearly indicate the end of it.
 
 .. table:: ``PHOT`` file variable columns
