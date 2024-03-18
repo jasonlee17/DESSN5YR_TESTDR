@@ -83,6 +83,14 @@ This folder includes the pippin input files needed to reproduce DES simulations 
 ..  - 07-LCFIT_MODEL
 
 
+Software tools tutorial
+=======================
+
+.. toctree:: 
+   :maxdepth: 2
+
+   tutorial/01-load_data
+
 Indices and tables
 ==================
 
@@ -92,7 +100,7 @@ Indices and tables
 
 
 Papers from DES-SN5YR
----------------------
+=====================
  
 
  - The Dark Energy Survey: Cosmology Results With ~1500 New High-redshift Type Ia Supernovae Using The Full 5-year Dataset 

@@ -1,0 +1,36 @@
+[project]
+name = "dessndr"
+version = "0.0.1"
+authors = [
+  { name="DES-SN", email="author@example.com" },
+]
+description = "DES SN 5YR DR Tools"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/BrunoSanchez/DESSN5YR_TESTDR"
+Issues = "https://github.com/BrunoSanchez/DESSN5YR_TESTDR/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "astropy",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["properimage", "properimage.*"]
+namespaces = false
