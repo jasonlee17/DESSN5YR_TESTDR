@@ -10,7 +10,7 @@ The SN program consisted on 5 years of observations using the Dark Energy Survey
 This public data release encompases the full set of light-curve measurements obtained, as well as any ancillary data products needed to constrain the cosmological expansion rate model parameters. 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    desSNprogram
    releaseDetails
