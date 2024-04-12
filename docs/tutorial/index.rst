@@ -10,3 +10,6 @@ Contents:
 
     01-load_data.ipynb
     02-dessn_fwcdm.ipynb
+    03-load_lcplot.ipynb
+    04-HubbleDiagram.ipynb
+    
