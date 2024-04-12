@@ -32,6 +32,7 @@ Overview of DES-SN 5-year Data release
 
 7 - PIPPIN_FILES
   The PIPPIN_ input files for reproducing the cosmological SNIa analysis. 
+  
 
 Detail description of release Contents
 ======================================  
@@ -42,10 +43,6 @@ Detail description of release Contents
   0_DATA
   1_SIMULATIONS
   2_LCFIT_MODEL
-
-.. releaseDetails
-.. desSNprogram
-
 
 
 DES 5YR Tutorials 
@@ -70,21 +67,54 @@ Used Public cosmology Codes
  - CosmoMC_ 
  - emcee_ 
 
+Using this Data 
+===============
+
+Please always obtain the data from our official download links. 
+
+.. note:: Version tags
+  Always Check the tag versions to verify you are using the latest version of our data files.
+
+
+Download the .zip from Zenodo
+-----------------------------
+
+.. warning:: UPDATE THIS LINK ONCE UPLOADED TO ZENODO 
+.. code-block:: bash
+
+  wget https://zenodo.org/records/4015340/files/SNDATA_ROOT_2020-11-03.tar.gz?download=1
+
+
+
+Clone DES-SN5YR Git repository
+------------------------------
+
+.. code-block:: bash
+
+  git clone https://github.com/des-science/DES-SN5YR
+  
+Aknowledge authorship of DES-SN5YR
+==================================
+
+.. note:: Please cite these references in order to give credit to the rightful authors.
+
 Papers from DES-SN5YR
-=====================
- 
+---------------------
 
  - `DES Collaboration (2024)`_ - The Dark Energy Survey: Cosmology Results With ~1500 New High-redshift Type Ia Supernovae Using The Full 5-year Dataset 
  - `Möller et al (2024)`_ - The Dark Energy Survey 5-year photometrically classified type Ia supernovae without host-galaxy redshifts 
  - `Vincenzi et al (2024)`_ - The Dark Energy Survey Supernova Program: Cosmological Analysis and Systematic Uncertainties 
  - `Lee & Acevedo et al. (2023)`_ - The Dark Energy Survey Supernova Program: Corrections on Photometry Due to Wavelength-dependent Atmospheric Effects 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
 
 .. include:: _static/links.rst
+
+
