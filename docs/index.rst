@@ -89,15 +89,7 @@ Software tools tutorial
 .. toctree:: 
    :maxdepth: 2
 
-   tutorial/01-load_data
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+   tutorial/index
 
 Papers from DES-SN5YR
 =====================
@@ -112,6 +104,12 @@ Papers from DES-SN5YR
  - The Dark Energy Survey Supernova Program: Corrections on Photometry Due to Wavelength-dependent Atmospheric Effects 
    - `Lee & Acevedo et al. (2023)`_
 
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
 
 .. include:: _static/links.rst
