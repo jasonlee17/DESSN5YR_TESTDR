@@ -1,6 +1,6 @@
-#########################################
-2_LCFIT_MODEL: Light Curve Fitting Models
-#########################################
+###########################################
+2 - LCFIT_MODEL: Light Curve Fitting Models
+###########################################
 
 Overview
 ========
@@ -30,4 +30,6 @@ Each model is re-trained applying calibration uncertainties shifts to each filte
 The calibration shifts are randoly drawn from the calibration uncertainty covariance matrix presented by Brout et al., 2021 (https://arxiv.org/abs/2112.03864, Matrix availabel at `https://github.com/PantheonPlusSH0ES/DataRelease/blob/main/Pantheon%2B_Data/2_CALIBRATION/FRAGILISTIC_COVARIANCE.npz`)
 The calibration shifts applied to build each of the SALT3 models presented here are in :file:`./SALT3.DES5YR-SYS/calib_shiftlists`
 
+...........
 
+.. include:: _static/links.rst

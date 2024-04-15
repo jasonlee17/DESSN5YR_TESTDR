@@ -34,8 +34,8 @@ Overview of DES-SN 5-year Data release
   The PIPPIN_ input files for reproducing the cosmological SNIa analysis. 
   
 
-Detail description of release Contents
-======================================  
+Detailed description of release Contents
+========================================
 
 .. toctree::
   :maxdepth: 2
@@ -43,6 +43,10 @@ Detail description of release Contents
   0_DATA
   1_SIMULATIONS
   2_LCFIT_MODEL
+  3_CLASSIFICATION
+  4_DISTANCES_COVMAT
+  5_COSMOLOGY
+  7_PIPPIN_FILES
 
 
 DES 5YR Tutorials 
@@ -101,10 +105,10 @@ Aknowledge authorship of DES-SN5YR
 Papers from DES-SN5YR
 ---------------------
 
- - `DES Collaboration (2024)`_ - The Dark Energy Survey: Cosmology Results With ~1500 New High-redshift Type Ia Supernovae Using The Full 5-year Dataset 
- - `Möller et al (2024)`_ - The Dark Energy Survey 5-year photometrically classified type Ia supernovae without host-galaxy redshifts 
- - `Vincenzi et al (2024)`_ - The Dark Energy Survey Supernova Program: Cosmological Analysis and Systematic Uncertainties 
- - `Lee & Acevedo et al. (2023)`_ - The Dark Energy Survey Supernova Program: Corrections on Photometry Due to Wavelength-dependent Atmospheric Effects 
+ - `DES Collaboration 2024`_ - The Dark Energy Survey: Cosmology Results With ~1500 New High-redshift Type Ia Supernovae Using The Full 5-year Dataset 
+ - `Möller et al. 2024`_ - The Dark Energy Survey 5-year photometrically classified type Ia supernovae without host-galaxy redshifts 
+ - `Vincenzi et al. 2024`_ - The Dark Energy Survey Supernova Program: Cosmological Analysis and Systematic Uncertainties 
+ - `Lee & Acevedo et al. 2023`_ - The Dark Energy Survey Supernova Program: Corrections on Photometry Due to Wavelength-dependent Atmospheric Effects 
 
 
 .. Indices and tables

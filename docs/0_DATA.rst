@@ -1,5 +1,5 @@
 ############################
-0_DATA: The light curve data
+0 - DATA: The light curve data
 ############################
 
 Overview
@@ -12,7 +12,7 @@ The full set of light-curves will be released after acceptance of `Sanchez et al
 Data Format
 ===========
 
-The light curve files are provided in standard `FITS`_ format following the SNANA_ convention. 
+The light curve files are provided in standard FITS_ format following the SNANA_ convention. 
 The data is split in  ``HEAD.FITS`` files, just for the header information, and ``PHOT.FITS`` files containing the actual light curve measurements.
 
 ``HEAD`` file 
@@ -83,13 +83,9 @@ This integer type variable can be used to find the event light-curve and it is s
     +-------------------------------+------------------------------------------------------+
     | ``HOSTGAL_LOGSFR[_ERR]``      | log(star formation rate) and error                   |
     +-------------------------------+------------------------------------------------------+
-    | ``HOSTGAL_MAG_[band]``        | host mags for band=u,g,r,i,z,Y                       |
+    | ``HOSTGAL_MAG_[band]``        | Host Magnitudes for band=u,g,r,i,z,Y                 |
     +-------------------------------+------------------------------------------------------+
-    | ``HOSTGAL_MAGERR_[band]``     | Host magnitude error. Each hostgal_xxx has           |
-    |                               | hostgal2_xxx for 2nd host-match;                     |
-    |                               | -999 indicates no 2nd host; else values are filled.  |
-    |                               | First listed host has smallest DDLR and may not be   |
-    |                               | the true host                                        |
+    | ``HOSTGAL_MAGERR_[band]``     | Host magnitude error.                                |
     +-------------------------------+------------------------------------------------------+
     | **Additional variables for simulated data.**                                         |
     +-------------------------------+------------------------------------------------------+
@@ -97,6 +93,13 @@ This integer type variable can be used to find the event light-curve and it is s
     +-------------------------------+------------------------------------------------------+
     | ``SIM_[SSS]``                 | true sim property SSS                                |
     +-------------------------------+------------------------------------------------------+
+
+.. note:: ``HOSTGAL_`` quantities
+    
+    - Each ``HOSTGAL_{}`` has ``HOSTGAL2_{}`` for 2nd host-match; 
+    - -999 indicates no 2nd host; else values are filled.
+    - First listed host has smallest DDLR and may not be the true host       
+
 
 
 ``PHOT`` file
@@ -106,18 +109,21 @@ The ``PHOT`` file contains the light curve measurements, with all written sequen
 
 .. table:: ``PHOT`` file variable columns
 
+    
     +-------------------------------+------------------------------------------------------+
     | Variable name                 | Description                                          |
     +===============================+======================================================+
-    | ``MJD``                       | Float, modified Julian day (-777 -> end light curve) |
+    | ``MJD``                       | Float, Modified Julian Day (MJD).                    |
     +-------------------------------+------------------------------------------------------+
-    | ``BAND``                      | String, g, r, i, z.                                  |
+    | ``BAND``                      | String indicating DES bandpass filter. (g, r, i, z)  |
     +-------------------------------+------------------------------------------------------+
     | ``CCDNUM``                    | CCD or detector number                               |
     +-------------------------------+------------------------------------------------------+
-    | ``IMGNUM``                    | image number; e.g. exposure number, visit id         |
+    | ``IMGNUM``                    | DES Image number identifier; e.g. exposure number,   |
+    |                               | or visit id                                          |
     +-------------------------------+------------------------------------------------------+
-    | ``FIELD``                     | name of field; e.g., SHALLOW, DEEP, etc ...          |
+    | ``FIELD``                     | DES-SN survey field name. (SHALLOW, DEEP)            |
+    |                               | (E1, E2, E3, S1, S2, X1, X2, X3, C1, C2)             |
     +-------------------------------+------------------------------------------------------+
     | ``PHOTFLAG``                  | bit-mask of information (check data README)          |
     +-------------------------------+------------------------------------------------------+
@@ -146,6 +152,7 @@ The ``PHOT`` file contains the light curve measurements, with all written sequen
     | ``SIM_MAGOBS``                | true model mag                                       |
     +-------------------------------+------------------------------------------------------+
 
+...........
 
-.. include:: ../_static/links.rst
+.. include:: _static/links.rst
 
