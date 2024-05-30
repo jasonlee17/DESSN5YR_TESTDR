@@ -26,19 +26,44 @@ Please check our [ReadTheDocs](dessnvyrdr.readthedocs.org) for all details on co
  - **7_PIPPIN_FILES:** This folder includes the pippin input files needed to reproduce DES simulations and cosmological analysis.
 
 
-## The DES-SN5YR utility package
+## The DES-SN5YR utility package 
 
 We release basic utilities for using this data. To install this package simply clone this github repo and install locally. This is also one way to obtain the full dataset.
 
+### Installation
+
 ```console
-$ git clone https://github.com/des-science/DES-SN5YR_DataRelease.git
-$ cd DES-SN5YR_DataRelease
+$ git clone https://github.com/BrunoSanchez/DESSN5YR_TESTDR.git
+$ cd DESSN5YR_TESTDR
 $ pip install -e .
+```
+<!-- $ git clone https://github.com/des-science/DES-SN5YR_DataRelease.git -->
+
+### Acquiring the Full Release dataset
+
+```console
+$ dessndr ObtainDES5YDR <dest_dir>
+```
+
+After this, in order to find your dataset globally in your system you should set up the environment variables
+
+```console
+$ export DES5YRDR_DATA='<dest_dir>/DES-SN5YR'
 ```
 
 ### Examples of use of this Data Release
 
-We provide some Jupyter Notebooks with examples to load and read this data, and produce some example figures. These are in the ``docs/tutorial`` directory. 
+We provide some Jupyter Notebooks with examples to load and read this data, and produce some example figures. These are in the ``docs/tutorial`` directory, or in the Tutorial section on [readthedocs](https://desdrtest.readthedocs.io).
+
+This package provides some utilities that can be imported in a Python session as
+
+
+```python
+>>> from dessndr import utils, data
+>>> phot = utils.PhotFITS(os.path.join(data.DES5YRDR_DATA, '0_DATA/DES-SN5YR_DES'))
+>>> lc = phot.get_lc(phot.cid_recs[0]))
+```
+
 
 ## References and citing this work
 
@@ -48,3 +73,4 @@ We provide some Jupyter Notebooks with examples to load and read this data, and 
 
 > Light curve and ancillary data release for the full Dark Energy Survey Supernova Program. JOURNAL NUMBER. [Sánchez et al (2024)](...)
 
+**Please, for the full documentation refer to [readthedocs](https://desdrtest.readthedocs.io).**

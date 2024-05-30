@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  snana_helpers.py
+#  utils.py
 #
 #  Copyright 2022 bruno <bruno.sanchez@duke.edu>
 #
@@ -216,7 +216,12 @@ class PhotFITS(object):
         self.dump_phot = Table.read(f'{version}_PHOT.FITS.gz')
 
         self.head_df = self.dump_head.to_pandas()
+        self.head_df['SNID'] = self.head_df['SNID'].astype(int)
+
         self.phot_df = self.dump_phot.to_pandas()
+        self.phot_df['BAND'] = self.phot_df.BAND.astype(str)
+        self.phot_df['FIELD'] = self.phot_df.FIELD.astype(str)
+        self.phot_df['MAG'] = -2.5 * np.log10(self.phot_df.FLUXCAL) + 27.5
 
         self.cid_recs = np.array(self.head_df.SNID.values, dtype=int)
 
@@ -229,14 +234,13 @@ class PhotFITS(object):
         else:
             logger.info(f"""CID {cid} not in records""")
             return None
-        lc['MAG'] = -2.5*np.log10(lc['FLUXCAL'].values)+27.5
         return lc
 
     @property
     def phot_table(self):
         return self.phot_df
 
-    def get_lcs(self, cidlist):
+    def get_lcs(self, cidlist: list):
         lcs = []
         for acid in cidlist:
             anlc = self.get_lc(acid)
@@ -252,5 +256,16 @@ class PhotFITS(object):
         except ValueError:
             return None
 
-    def query_cids(self):
-        pass
+    def query_cids(self, cids: int | str | list[str, int]):
+        if not isinstance(cids, list):
+            cids = [cids]
+    
+        query_result = {}
+        for cid in cids:
+            if cid in self.cid_recs:
+                query_result[cid] = dict(
+                    self.head_df.iloc[np.where(self.cid_recs==cid)]
+                )
+            
+        return query_result 
+    
