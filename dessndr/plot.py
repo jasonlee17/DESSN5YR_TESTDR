@@ -31,7 +31,7 @@ oldParams = copy(plt.rcParams)
 
 font = {'family' : 'sans-serif',
         'weight' : 'normal',
-        'size'   : 20}
+        'size'   : 16}
 
 matplotlib.rc('font', **font)
 
@@ -92,3 +92,30 @@ def plot_sn_light_curve(df,
     plt.tight_layout()
     return fig, ax
 
+
+def plot_lcplot(lcplot_data, cid=None):
+    if cid is None:
+        raise ValueError
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    for aband in FLTLIST:
+        df = lcplot_data[lcplot_data.SNID==cid]
+        df_band = df[df.BAND==aband]
+        df_band_data = df_band[df_band.DATA_MODEL==1]
+        df_band_model = df_band[df_band.DATA_MODEL==0]
+        ax.errorbar(
+            df_band_data.PHASE, df_band_data.FLUXCAL, df_band_data.FLUXCALERR, 
+            marker='o', color=FLTCOLORS[aband], label=aband+' DATA')
+        ax.plot(df_band_model.PHASE, df_band_model.FLUXCAL, 
+                '--', color=FLTCOLORS[aband],label=aband+' MODEL')
+    
+    ax.set_title(f'SN CID: {cid} | chi2/dof={np.sum(df[df.DATA_MODEL==1].CHI2)/np.sum(df.DATA_MODEL==1):.3f}') 
+    ax.set_xlim(-25, 75)
+    yscale = (np.min(df.FLUXCAL-2*df.FLUXCALERR.mean()), 
+              np.max(df.FLUXCAL+2*df.FLUXCALERR.mean()))
+    ax.set_ylim(*yscale)
+    ax.set_xlabel('PHASE')
+    ax.set_ylabel('FLUXCAL')
+    plt.legend()
+    plt.tight_layout()
+    return fig, ax

@@ -36,6 +36,29 @@ logger = logging.getLogger(__name__)
 # Reading functions
 # =============================================================================
 
+def read_lcplot(filename):
+    """Reads a LCPLOT file. It takes a path and returns a table.
+
+    Parameters
+    ----------
+    - filename: data filename
+
+    Returns
+    -------
+    - table: Pandas.DataFrame, containg data
+    """
+
+    config = {
+        'sep': '\s+',
+    }
+
+    if filename.endswith('.gz'):
+        config['compression'] = 'gzip'
+    
+    return pd.read_csv(filename,  **config)
+
+
+
 def open_fitres(filename):
     """Reads a FITRES file. It takes a path and returns a table.
 
