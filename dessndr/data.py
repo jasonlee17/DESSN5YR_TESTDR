@@ -21,7 +21,6 @@
 #  MA 02110-1301, USA.
 #
 
-# my_package/data_handler.py
 import os
 import requests
 from tqdm import tqdm
