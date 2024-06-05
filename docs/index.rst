@@ -59,8 +59,7 @@ DES 5YR Tutorials
    tutorial/02-dessn_fwcdm
    tutorial/03-load_lcplot
    tutorial/04-HubbleDiagram
-
-.. tutorial/index
+   tutorial/05-LambdaDependentCorrections.ipynb
 
 Used Public cosmology Codes  
 ===========================

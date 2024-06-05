@@ -1,6 +1,6 @@
-######################
-``Pippin`` Input Files 
-######################
+##########################
+6 - ``Pippin`` Input Files 
+##########################
 
 `Pippin`_ code is available at https://github.com/dessn/Pippin.
 
