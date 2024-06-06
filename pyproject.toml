@@ -19,7 +19,7 @@ Homepage = "https://github.com/BrunoSanchez/DESSN5YR_TESTDR"
 Issues = "https://github.com/BrunoSanchez/DESSN5YR_TESTDR/issues"
 
 [project.scripts]
-dowloaddessndr = "dessndr.scripts.download_dessndr:main"
+downloaddessndr = "dessndr.scripts.download_dessndr:main"
 
 [build-system]
 requires = ["setuptools>=61.0"]
