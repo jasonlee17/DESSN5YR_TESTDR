@@ -42,12 +42,13 @@ $ pip install -e .
 ### Acquiring the Full Release dataset
 
 ```console
-$ dessndr ObtainDES5YDR <dest_dir>
+$ downloaddessndr <dest_dir>
 ```
 
 After this, in order to find your dataset globally in your system you should set up the environment variables
 
 ```console
+$ export DES5YRDR_DATA_ROOT='<dest_dir>'
 $ export DES5YRDR_DATA='<dest_dir>/DES-SN5YR'
 ```
 

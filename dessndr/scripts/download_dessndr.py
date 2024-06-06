@@ -51,4 +51,4 @@ if __name__ == "__main__":
     main()
     print("Download complete. You should set up the environment variable")
     print(f"export DES5YRDR_DATA_ROOT={args.dest_folder}")
-    
+    print(f"export DES5YRDR_DATA={args.dest_folder}/DES-SN5YR")
