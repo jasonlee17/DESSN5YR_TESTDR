@@ -30,6 +30,9 @@ Overview of DES-SN 5-year Data release
 5 - Cosmology
   Likelihood used, and obtained chains from CosmoMC_  and emcee_ 
 
+6 - DCR_CORRECTIONS
+  The Wavelength-dependent photometrical corrections to our observed transients
+
 7 - PIPPIN_FILES
   The PIPPIN_ input files for reproducing the cosmological SNIa analysis. 
   
@@ -46,6 +49,7 @@ Detailed description of release Contents
   3_CLASSIFICATION
   4_DISTANCES_COVMAT
   5_COSMOLOGY
+  6_DCR_CORRECTIONS
   7_PIPPIN_FILES
 
 

@@ -9,6 +9,16 @@ The light-curves are produced using the Scene Modelling Photometry pipeline desc
 
 The full set of light-curves will be released after acceptance of `Sanchez et al. 2024`_ (in prep.) currently in collaboration wide review.
 
+Content datasets
+----------------
+
+We provide light-curves in 4 different directories:
+
+* DES-SN5YR_DESDR: The SMP light curve dataset from DES 5YR
+* DES-SN5YR_DESDR_specz: The subset of SMP light curves with a host spectroscopic redshift
+* DES-SN5YR_DESDR_HD: Hubble Diagram 
+* DES-SN5YR_DESDR_DIFFIMG
+
 Data Format
 ===========
 
