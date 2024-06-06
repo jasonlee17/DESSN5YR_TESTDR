@@ -53,17 +53,62 @@ Detailed description of release Contents
   7_PIPPIN_FILES
 
 
+The DES-SN5YR utility package 
+=============================
+
+We release basic utilities for using this data. To install this package simply clone this github repo and install locally. This is also one way to obtain the full dataset.
+
+Installation
+------------
+
+```console
+$ git clone https://github.com/BrunoSanchez/DESSN5YR_TESTDR.git
+$ cd DESSN5YR_TESTDR
+$ pip install -e .
+```
+
+<!-- $ git clone https://github.com/des-science/DES-SN5YR_DataRelease.git -->
+
+Acquiring the Full Release dataset
+----------------------------------
+
+```console
+$ dessndr ObtainDES5YDR <dest_dir>
+```
+
+After this, in order to find your dataset globally in your system you should set up the environment variables
+
+```console
+$ export DES5YRDR_DATA='<dest_dir>/DES-SN5YR'
+```
+
+Examples of use of this Data Release
+====================================
+
+We provide some Jupyter Notebooks with examples to load and read this data, and produce some example figures. These are in the ``docs/tutorial`` directory, or in the Tutorial section on [readthedocs](https://desdrtest.readthedocs.io).
+
+This package provides some utilities that can be imported in a Python session as
+
+
+```python
+>>> from dessndr import utils, data
+>>> phot = utils.PhotFITS(os.path.join(data.DES5YRDR_DATA, '0_DATA/DES-SN5YR_DES'))
+>>> lc = phot.get_lc(phot.cid_recs[0]))
+```
+
 DES 5YR Tutorials 
-=================
+-----------------
 
 .. toctree:: 
    :maxdepth: 2
 
    tutorial/01-load_data
-   tutorial/02-dessn_fwcdm
-   tutorial/03-load_lcplot
+   tutorial/02-load_lcplot
+   tutorial/03-Classification
    tutorial/04-HubbleDiagram
-   tutorial/05-LambdaDependentCorrections.ipynb
+   tutorial/05-LambdaDependentCorrections
+   tutorial/extra-01-dessn_fwcdm
+
 
 Used Public cosmology Codes  
 ===========================
