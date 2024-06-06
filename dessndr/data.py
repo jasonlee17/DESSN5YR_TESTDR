@@ -52,7 +52,7 @@ def clone_repo(repo_url=DES5YRDR_URL, dest_folder=DES5YRDR_DATA_ROOT):
     
     os.environ['DES5YRDR_DATA'] = clone_path
     print(f"Repository cloned to: {clone_path}")
-    print(f"Environment variable DES5YRDR_DATA set to: {clone_path}")
+    print(f"You should set up an environment variable DES5YRDR_DATA: {clone_path}")
 
 
 def download_all(*args, **kwargs):

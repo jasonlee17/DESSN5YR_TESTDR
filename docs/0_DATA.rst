@@ -1,6 +1,7 @@
-############################
-0 - DATA: The light curve data
-############################
+############################################
+0 - DATA: Transient light curves from DES-SN
+############################################
+
 
 Overview
 ========
@@ -108,7 +109,11 @@ This integer type variable can be used to find the event light-curve and it is s
     
     - Each ``HOSTGAL_{}`` has ``HOSTGAL2_{}`` for 2nd host-match; 
     - -999 indicates no 2nd host; else values are filled.
-    - First listed host has smallest DDLR and may not be the true host       
+    - First listed host has smallest DDLR and may not be the true host   
+
+.. note:: Using data from the `HOSTGAL` quantities:
+
+    Please cite `Kelsey et al. 2023`_ and `Wiseman et al. 2020`_.
 
 
 

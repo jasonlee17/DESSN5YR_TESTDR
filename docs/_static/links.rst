@@ -19,7 +19,8 @@
 .. _`Vincenzi et al. 2024`: https://ui.adsabs.harvard.edu/link_gateway/2024arXiv240102945V/doi:10.48550/arXiv.2401.02945
 .. _`DES Collaboration 2024`: https://ui.adsabs.harvard.edu/link_gateway/2024arXiv240102929D/doi:10.48550/arXiv.2401.02929
 .. _`Sanchez et al. 2024`: https://ui.adsabs.harvard.edu/abs/2024arXiv240102929D/abstract
-
+.. _`Wiseman et al. 2020`: https://ui.adsabs.harvard.edu/link_gateway/2020MNRAS.495.4040W/doi:10.1093/mnras/staa1302
+.. _`Kelsey et al. 2023`: https://ui.adsabs.harvard.edu/link_gateway/2023MNRAS.519.3046K/doi:10.1093/mnras/stac3711
 
 .. General links
 .. _FITS: https://fits.gsfc.nasa.gov/fits_documentation.html

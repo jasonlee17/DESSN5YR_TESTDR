@@ -8,33 +8,35 @@ Dark Energy Survey Supernova Program 5YR
 
    This is the **full public data release** of DES-SN (DES-SN5YR) containing all data products used to compute the cosmological result from the full 5 years of photometrically classified supernovae (SNe) combined with a sample of low-redshift SNe. 
 
+   Instructions to download the full data release and its accompanying python utility package can be found below.
 
-Overview of DES-SN 5-year Data release 
-======================================
 
-0 - DATA
-  Transient light curves from DES-SN, measured with DIFFIMG and SMP photometry pipelines, and also including SALT3 model fitted curves.
+.. Overview of DES-SN 5-year Data release 
+.. ======================================
 
-1 - Simulations
-  DES mocks used for testing and validation of the DES cosmological pipeline. 
+.. 0 - DATA
+..   Transient light curves from DES-SN, measured with DIFFIMG and SMP photometry pipelines, and also including SALT3 model fitted curves.
 
-2 - LCFIT_MODEL
-  The trained SALT3 SED time-series used in DES-SN5YR cosmological analysis.
+.. 1 - Simulations
+..   DES mocks used for testing and validation of the DES cosmological pipeline. 
 
-3 - CLASSIFICATION
-  Classification probabilities for the DES SNe used in the DES-SN5YR cosmological analysis.
+.. 2 - LCFIT_MODEL
+..   The trained SALT3 SED time-series used in DES-SN5YR cosmological analysis.
 
-4 - DISTANCES_COVMAT
-  Distances and Hubble Diagram, global SN sample parameters :math:`\alpha, \beta, \gamma, M_0`, and Statistical and Systematic covariance matrices.
+.. 3 - CLASSIFICATION
+..   Classification probabilities for the DES SNe used in the DES-SN5YR cosmological analysis.
 
-5 - Cosmology
-  Likelihood used, and obtained chains from CosmoMC_  and emcee_ 
+.. 4 - DISTANCES_COVMAT
+..   Distances and Hubble Diagram, global SN sample parameters :math:`\alpha, \beta, \gamma, M_0`, and Statistical and Systematic covariance matrices.
 
-6 - DCR_CORRECTIONS
-  The Wavelength-dependent photometrical corrections to our observed transients
+.. 5 - Cosmology
+..   Likelihood used, and obtained chains from CosmoMC_  and emcee_ 
 
-7 - PIPPIN_FILES
-  The PIPPIN_ input files for reproducing the cosmological SNIa analysis. 
+.. 6 - DCR_CORRECTIONS
+..   The Wavelength-dependent photometrical corrections to our observed transients
+
+.. 7 - PIPPIN_FILES
+..   The PIPPIN_ input files for reproducing the cosmological SNIa analysis. 
   
 
 Detailed description of release Contents
@@ -61,27 +63,28 @@ We release basic utilities for using this data. To install this package simply c
 Installation
 ------------
 
-```console
-$ git clone https://github.com/BrunoSanchez/DESSN5YR_TESTDR.git
-$ cd DESSN5YR_TESTDR
-$ pip install -e .
-```
+.. code-block:: bash
 
-<!-- $ git clone https://github.com/des-science/DES-SN5YR_DataRelease.git -->
+  $ git clone https://github.com/BrunoSanchez/DESSN5YR_TESTDR.git
+  $ cd DESSN5YR_TESTDR
+  $ pip install -e .
+
 
 Acquiring the Full Release dataset
 ----------------------------------
 
-```console
-$ downloaddessndr <dest_dir>
-```
+.. code-block:: bash
+   
+  $ downloaddessndr <dest_dir>
+
 
 After this, in order to find your dataset globally in your system you should set up the environment variables
 
-```console
-$ export DES5YRDR_DATA_ROOT='<dest_dir>'
-$ export DES5YRDR_DATA='<dest_dir>/DES-SN5YR'
-```
+.. code-block:: bash
+
+  $ export DES5YRDR_DATA_ROOT='<dest_dir>'
+  $ export DES5YRDR_DATA='<dest_dir>/DES-SN5YR'
+
 
 Examples of use of this Data Release
 ====================================
@@ -91,11 +94,12 @@ We provide some Jupyter Notebooks with examples to load and read this data, and 
 This package provides some utilities that can be imported in a Python session as
 
 
-```python
->>> from dessndr import utils, data
->>> phot = utils.PhotFITS(os.path.join(data.DES5YRDR_DATA, '0_DATA/DES-SN5YR_DES'))
->>> lc = phot.get_lc(phot.cid_recs[0]))
-```
+.. code-block:: python
+
+  >>> from dessndr import utils, data
+  >>> phot = utils.PhotFITS(os.path.join(data.DES5YRDR_DATA, '0_DATA/DES-SN5YR_DES'))
+  >>> lc = phot.get_lc(phot.cid_recs[0]))
+
 
 DES 5YR Tutorials 
 -----------------
@@ -151,13 +155,14 @@ Aknowledge authorship of DES-SN5YR
 
 .. note:: Please cite these references in order to give credit to the rightful authors.
 
-Papers from DES-SN5YR
----------------------
 
  - `DES Collaboration 2024`_ - The Dark Energy Survey: Cosmology Results With ~1500 New High-redshift Type Ia Supernovae Using The Full 5-year Dataset 
- - `Möller et al. 2024`_ - The Dark Energy Survey 5-year photometrically classified type Ia supernovae without host-galaxy redshifts 
  - `Vincenzi et al. 2024`_ - The Dark Energy Survey Supernova Program: Cosmological Analysis and Systematic Uncertainties 
+ - `Sanchez et al. 2024`_ - Light curves and data release for the full Dark Energy Survey Supernova Program
+ - `Möller et al. 2024`_ - The Dark Energy Survey 5-year photometrically classified type Ia supernovae without host-galaxy redshifts 
  - `Lee & Acevedo et al. 2023`_ - The Dark Energy Survey Supernova Program: Corrections on Photometry Due to Wavelength-dependent Atmospheric Effects 
+ - `Kelsey et al. 2023`_ - Concerning colour: The effect of environment on type Ia supernova colour in the dark energy survey
+ - `Wiseman et al. 2020`_ - Supernova host galaxies in the dark energy survey: I. Deep coadds, photometry, and stellar masses
 
 
 .. Indices and tables
