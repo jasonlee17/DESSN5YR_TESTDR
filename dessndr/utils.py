@@ -279,7 +279,7 @@ class PhotFITS(object):
         except ValueError:
             return None
 
-    def query_cids(self, cids: int | str | list[str, int]):
+    def query_cids(self, cids):
         if not isinstance(cids, list):
             cids = [cids]
     
