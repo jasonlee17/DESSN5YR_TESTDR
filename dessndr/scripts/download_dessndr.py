@@ -38,10 +38,8 @@ def main():
         type=str, 
         default=data.DES5YRDR_URL
     )
-    #parser.set_defaults(func=data.clone_repo)
 
     args = parser.parse_args()
-    import ipdb; ipdb.set_trace()
 
     data.clone_repo(
         repo_url=args.repo_url,
@@ -51,3 +49,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+    print("Download complete. You should set up the environment variable")
+    print(f"export DES5YRDR_DATA_ROOT={args.dest_folder}")
+    
